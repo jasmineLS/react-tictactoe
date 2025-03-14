@@ -22,6 +22,11 @@ function Board() {
     setXIsNext(!xIsNext);
   }
 
+  function handleReset() {
+    setSquares(Array(9).fill(null));
+    setXIsNext(true);
+  }
+
 
   const winner = calculateWinner(squares);
   const status = winner ? `Winner: ${winner}` : `Next player: ${xIsNext ? "X" : "O"}`;
